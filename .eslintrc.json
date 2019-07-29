@@ -8,10 +8,15 @@
     "browser": true,
     "es6": true
   },
+  "parser": "babel-eslint",
   "extends": ["prettier", "plugin:react/recommended"],
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "fetch": true,
+    "window": true,
+    "document": true,
+    "it": true
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,5 +26,7 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
-  "rules": {}
+  "rules": {
+    "react/display-name": "off"
+  }
 }

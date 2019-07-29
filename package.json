@@ -3,23 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "animejs": "^3.1.0",
+    "core-js": "^3.1.4",
     "dotenv": "^8.0.0",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-modal-es": "^3.0.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.1",
-    "prettier": "^1.18.2"
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --use .env-production",
+    "dev": "react-scripts start --use .env-development",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -1,5 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { Provider } from 'react-redux';
+import "core-js";
+import 'whatwg-fetch';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './App';
+import configureStore from './store/configurationStore';
+
+const store = configureStore();
+
+ReactDOM.render(
+  <Provider store={store} key="provider">
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
