@@ -3,15 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.0.0",
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.1",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fix": "npm run format && npm run lint -- --fix",
+    "format": "prettier --write \"**/*.{js,json,css,scss,md,html}\"",
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
